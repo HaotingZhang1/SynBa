@@ -1,9 +1,10 @@
 # SynBa: Improved estimation of drug combination synergies with uncertainty quantification
 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![PyStan 2.19.0.0](https://img.shields.io/badge/PyStan-2.19.0.0-blueviolet)](https://img.shields.io/badge/PyStan-2.19.0.0-blueviolet)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
-This repository is the implementation of SynBa in Python 3.7. It will be continuously updated in the next few weeks.
+This repository is the implementation of **SynBa** in Python 3.7. The implementation is built using PyStan, the Python interface to the probabilistic programming language **Stan**. This repository will be continuously updated in the next few weeks.
 
 Currently, the repository contains the codes required to reproduce the results of our work (to be uploaded to bioRxiv). Results can be reproduced by following these steps:
 * Download the repository.

@@ -10,7 +10,7 @@ Currently, the repository contains the codes required to reproduce the results o
 * Set up a new environment and install the required packages. For example, it can be done by running the following:
 ```
 conda create -n synba
-conda activate mfcvae
+conda activate synba
 conda install pip
 pip install -r requirements.txt 
 ```

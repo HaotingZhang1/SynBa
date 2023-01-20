@@ -1,0 +1,8 @@
+numpy
+matplotlib
+pandas
+seaborn
+scikit-learn
+scipy
+pystan==2.19.0.0
+synergy==0.5.1

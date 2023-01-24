@@ -19,6 +19,12 @@ pip install -r requirements.txt
 * To reproduce the quantitative results in Table 1 and Figures 6 and 7, the relevant datasets need to be downloaded. Both datasets used in this study are publicly available, although approval would be required to download the AstraZeneca-Sanger DREAM challenge, by submitting a data use statement. The DOI of the DREAM dataset is `10.7303/syn4231880`. The DOI of the subset of NCI-ALMANAC used in this study is `10.5281/zenodo.4135059`.
 * After downloading the data, the quantitative results can then be reproduced by running `prediction_reproduce.py` and `calibration_reproduce.py`. Due to the large number of examples in the datasets, it will take a long time for the programme to complete.
 
+The repository also contains `synba_mono.ipynb`, an **interactive Jupyter notebook** for the monotherapy model (i.e. Box 1 in the paper). The notebook can be directly run on **Google Colab** (<a>colab.research.google.com</a>) without setting up anything in advance. Users can upload their own monotherapy dose-response data, fit SynBa to their data and visualise the output including:
+* The posterior distribution for the **potency (IC50)**
+* The posterior distribution for the **efficacy (Emax)**
+* Sample dose-response curves from the posterior distribution
+* The estimated noise level for the responses
+
 The next updates of this repository will include the following:
-* An interactive Jupyter/Colab Notebook where users can upload their own dose-response data, fit SynBa to their data and visualise the output.
-* A step-by-step instruction on how to fit SynBa to a dose-response dataset.
+* An interactive notebook for the combination model (i.e. Box 2 in the paper).
+* A more detailed documentation on how to fit SynBa to a dose-response dataset, as well as how to tune the priors and the other tunable settings.

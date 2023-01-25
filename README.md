@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 The repository also contains `synba_mono.ipynb`, an [**interactive Colab/Jupyter notebook**](https://colab.research.google.com/github/HaotingZhang1/SynBa/blob/main/synba_mono.ipynb) for the monotherapy model (i.e. Box 1 in the paper). This notebook can be run directly without setting up anything in advance. Users can upload their own monotherapy dose-response data, fit SynBa to their data and visualise the output including:
 * The posterior distribution for the **potency (IC50)**
-* The posterior distribution for the **efficacy (Emax)**
+* The posterior distribution for the **efficacy (Einf)**
 * Sample dose-response curves from the posterior distribution
 * The estimated noise level for the responses
 

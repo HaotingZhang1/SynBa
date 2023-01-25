@@ -12,8 +12,7 @@ The repository contains `synba_mono.ipynb` ([**Colab link**](https://colab.resea
 * (Monotherapy) Sample dose-response curves from the posterior distribution
 * (Monotherapy) The estimated noise level for the responses
 * (Combination) The contour plot for the joint posterior distribution of the **synergistic efficacy (ΔHSA)** and the **synergistic potency (α)**
-* (Combination) The histogram of the synergistic efficacy. 
-* (Combination) The histogram of synergistic potency.
+* (Combination) The histogram of the synergistic efficacy and the synergistic potency
 
 The repository also contains the codes required to reproduce the results of our work (to be uploaded to bioRxiv). Results can be reproduced by following these steps:
 * Download the repository.

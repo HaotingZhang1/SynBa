@@ -8,7 +8,7 @@
 This repository is the official implementation of **SynBa**, a method for the estimation of drug combination synergies with uncertainty quantification.
 The [**preprint**](https://www.biorxiv.org/content/10.1101/2023.01.24.524900) that describes the method is now available on bioRxiv.
 
-The implementation is built using PyStan, the Python interface to the probabilistic programming language **Stan**. This repository will be continuously updated in the next few weeks.
+The implementation is built using PyStan, the Python interface to the probabilistic programming language **Stan**. This repository is being maintained and will be continuously updated.
 
 ### Interactive Notebooks
 The repository contains `synba_mono.ipynb` ([**Colab link**](https://colab.research.google.com/github/HaotingZhang1/SynBa/blob/main/synba_mono.ipynb)) and `synba_combo.ipynb` ([**Colab link**](https://colab.research.google.com/github/HaotingZhang1/SynBa/blob/main/synba_combo.ipynb)), two interactive Colab/Jupyter notebooks that illustrate the monotherapy model (i.e. Box 1 in the paper) and the combination model (i.e. Box 2 in the paper) respectively.
@@ -33,7 +33,8 @@ pip install -r requirements.txt
 ```
 * Figures 3 to 5 can then be reproduced by directly running `figure3.py`, `figure4.py` and `figure5.py`.
 * To reproduce the quantitative results in Table 1 and Figures 6 and 7, the relevant datasets need to be downloaded. Both datasets used in this study are publicly available, although approval would be required to download the AstraZeneca-Sanger DREAM challenge, by submitting a data use statement. The DOI of the DREAM dataset is `10.7303/syn4231880`. The DOI of the subset of NCI-ALMANAC used in this study is `10.5281/zenodo.4135059`.
-* After downloading the data, the quantitative results can then be reproduced by running `prediction_reproduce.py` and `calibration_reproduce.py`. Due to the large number of examples in the datasets, it will take a long time for the programme to complete.
+* To reproduce the results for NCI-ALMANAC, run `nci_extract_combo.py` to generate the numpy arrays for the dose-response matrices.
+* After downloading the data (and running `nci_extract_combo.py` if NCI-ALMANAC is the dataset of interest), the quantitative results can then be reproduced by running `prediction_reproduce.py` and `calibration_reproduce.py`. Due to the large number of examples in the datasets, it will take a long time for the programme to complete.
 
 ### To be updated
 The next updates of this repository will include the following:

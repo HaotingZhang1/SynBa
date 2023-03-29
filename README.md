@@ -36,6 +36,11 @@ pip install -r requirements.txt
 * To reproduce the results for NCI-ALMANAC, run `nci_extract_combo.py` to generate the numpy arrays for the dose-response matrices.
 * After downloading the data (and running `nci_extract_combo.py` if NCI-ALMANAC is the dataset of interest), the quantitative results can then be reproduced by running `prediction_reproduce.py` and `calibration_reproduce.py`. Due to the large number of examples in the datasets, it will take a long time for the programme to complete.
 
+To reproduce the result on HandGP and bayesynergy in Table S1 of the Supplementary Material, a different environment is required.
+`prediction_handgp.py` is the script to reproduce the result for the test RMSE of HandGP, but the packages `tensorflow`, `tensorflow-probability` and `gpflow` need to be installed by following the instructions on the HandGP repository ([**https://github.com/YuliyaShapovalova/HandGP**](https://github.com/YuliyaShapovalova/HandGP)). The utility script `utilities.py` in the `HandGP` folder of the HandGP repository also needs to be copied into the working folder.
+
+For bayesynergy, R and Rstan are used instead of Python and PyStan. `prediction_bayesynergy_dream.R` and `prediction_bayesynergy_nci.R` are the R scripts to reproduce the test RMSE for bayesynergy. Packages `devtools`,`rstan` and `bayesynergy` need to be installed in R by following the instructions on the bayesynergy repository ([**https://github.com/ocbe-uio/bayesynergy**](https://github.com/ocbe-uio/bayesynergy)).
+
 ### To be updated
 The next updates of this repository will include the following:
 * More visualisation options in the interactive notebooks.

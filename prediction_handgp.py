@@ -24,8 +24,6 @@ parser.add_argument('--save_output', type=str2bool, nargs='?', dest='save_output
                     help="whether to save the output or not")
 parser.add_argument('--path', type=str, default="", metavar='N',
                     help="folder to save the numpy arrays")
-parser.add_argument('--batch_no', type=int, default=0, metavar='N',
-                    help='the batch number selected for the training on dream')
 parser.add_argument('--cell_no', type=int, default=0, metavar='N',
                     help='the cell selected for the training on nci-almanac-subset')
 

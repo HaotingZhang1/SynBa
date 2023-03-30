@@ -34,12 +34,17 @@ pip install -r requirements.txt
 * Figures 3 to 5 can then be reproduced by directly running `figure3.py`, `figure4.py` and `figure5.py`.
 * To reproduce the quantitative results in Table 1 and Figures 6 and 7, the relevant datasets need to be downloaded. Both datasets used in this study are publicly available, although approval would be required to download the AstraZeneca-Sanger DREAM challenge, by submitting a data use statement. The DOI of the DREAM dataset is `10.7303/syn4231880`. The DOI of the subset of NCI-ALMANAC used in this study is `10.5281/zenodo.4135059`.
 * To reproduce the results for NCI-ALMANAC, run `nci_extract_combo.py` to generate the numpy arrays for the dose-response matrices.
-* After downloading the data (and running `nci_extract_combo.py` if NCI-ALMANAC is the dataset of interest), the quantitative results can then be reproduced by running `prediction_reproduce.py` and `calibration_reproduce.py`. Due to the large number of examples in the datasets, it will take a long time for the programme to complete.
+* After downloading the data (and running `nci_extract_combo.py` if NCI-ALMANAC is the dataset of interest), the quantitative results can then be reproduced by running `prediction_reproduce.py` and `calibration_reproduce.py`. Due to the large number of examples in the datasets, it will take a long time for the programme to complete (e.g. around 12-24 hours for the prediction experiment on DREAM, depending on the machine).
+* Note that the cell line index (between 0 and 59) needs to be specified for NCI-ALMANAC in `prediction_reproduce.py`, due to the large number of examples in NCI-ALMANAC.
+  After running `prediction_reproduce.py` for all cell lines (e.g. by running the following for all integers K from 0 to 59), the test RMSEs and the test log-likelihoods are concatenated to compute the final numbers in Table 1.
+  ```
+  python3 prediction_reproduce.py --dataset 'nci-almanac-subset' --cell_no K
+  ```
 
 To reproduce the result on HandGP and bayesynergy in Table S1 of the Supplementary Material, a different environment is required.
-`prediction_handgp.py` is the script to reproduce the result for the test RMSE of HandGP, but the packages `tensorflow`, `tensorflow-probability` and `gpflow` need to be installed by following the instructions on the HandGP repository ([**https://github.com/YuliyaShapovalova/HandGP**](https://github.com/YuliyaShapovalova/HandGP)). The utility script `utilities.py` in the `HandGP` folder of the HandGP repository also needs to be copied into the working folder.
+`prediction_handgp.py` is the script to reproduce the result for the test RMSE of HandGP. Before running the script, the packages `tensorflow`, `tensorflow-probability` and `gpflow` need to be installed by following the instructions on the HandGP repository ([**https://github.com/YuliyaShapovalova/HandGP**](https://github.com/YuliyaShapovalova/HandGP)). The utility script `utilities.py` in the `HandGP` folder of the HandGP repository also needs to be copied into the working folder.
 
-For bayesynergy, R and Rstan are used instead of Python and PyStan. `prediction_bayesynergy_dream.R` and `prediction_bayesynergy_nci.R` are the R scripts to reproduce the test RMSE for bayesynergy. Packages `devtools`,`rstan` and `bayesynergy` need to be installed in R by following the instructions on the bayesynergy repository ([**https://github.com/ocbe-uio/bayesynergy**](https://github.com/ocbe-uio/bayesynergy)).
+To train the bayesynergy model, R and Rstan are used instead of Python and PyStan. `prediction_bayesynergy_dream.R` and `prediction_bayesynergy_nci.R` are the R scripts to reproduce the test RMSE for bayesynergy. Packages `devtools`,`rstan` and `bayesynergy` need to be installed in R by following the instructions on the bayesynergy repository ([**https://github.com/ocbe-uio/bayesynergy**](https://github.com/ocbe-uio/bayesynergy)).
 
 ### To be updated
 The next updates of this repository will include the following:

@@ -1,18 +1,6 @@
-from synergy.single import Hill, Hill_CI, Hill_2P
-from synergy.combination import MuSyC, BRAID, Zimmer, Loewe, Bliss, ZIP, HSA, Schindler, CombinationIndex
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import time
-import seaborn as sns
-from mpl_toolkits.mplot3d import Axes3D
-import argparse
 from utils import *
 import pystan
-import random
 import warnings
-from scipy import stats
-from sklearn.neighbors import KernelDensity
 import matplotlib as mpl
 
 

@@ -60,8 +60,8 @@ If you find SynBa useful in your research, please cite our paper:
 	elocation-id = {2023.01.24.524900},
 	year = {2023},
 	doi = {10.1101/2023.01.24.524900},
-	URL = {https://www.biorxiv.org/content/early/2023/01/25/2023.01.24.524900},
-	eprint = {https://www.biorxiv.org/content/early/2023/01/25/2023.01.24.524900.full.pdf},
+	URL = {https://www.biorxiv.org/content/10.1101/2023.01.24.524900v2},
+	eprint = {https://www.biorxiv.org/content/10.1101/2023.01.24.524900v2.full.pdf},
 	journal = {bioRxiv}
 }
 ```

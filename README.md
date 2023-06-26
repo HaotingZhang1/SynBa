@@ -2,13 +2,22 @@
 
 [![bioRxiv](https://img.shields.io/badge/bioRxiv-10.1101%2F2023.01.24.524900-red)](https://www.biorxiv.org/content/10.1101/2023.01.24.524900)
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
+[![CmdStanPy 1.1.0](https://shields.io/badge/CmdStanPy-1.1.0-orange)](https://cmdstanpy.readthedocs.io/en/v1.1.0/)
 [![PyStan 2.19.0.0](https://img.shields.io/badge/PyStan-2.19.0.0-blueviolet)](https://pypi.org/project/pystan/2.19.0.0/)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 This repository is the official implementation of **SynBa**, a method for the estimation of drug combination synergies with uncertainty quantification.
 The [**preprint**](https://www.biorxiv.org/content/10.1101/2023.01.24.524900) that describes the method is now available on bioRxiv.
+This repository is being maintained and will be continuously updated.
 
-The implementation is built using PyStan, the Python interface to the probabilistic programming language **Stan**. This repository is being maintained and will be continuously updated.
+The implementations in the interactive notebooks are built using **CmdStanPy**, a Python package which wraps **CmdStan**, the command-line interface to the probabilistic programming language **Stan**.
+
+The results in the paper are reproduced using **PyStan** 2, which is a Python interface to Stan. 
+
+This repository is currently in the process of shifting from PyStan to CmdStanPy.
+This is because the plan is to make SynBa available for both Python and R users.
+From this aspect, CmdStanPy a more suitable choice than PyStan because CmdStanPy and CmdStanR both rely on the same command-line interface, making it easier for future updates.
+The current plan is that any future update will be based on CmdStan (including CmdStanPy and CmdStanR).
 
 ### Interactive Notebooks
 The repository contains `synba_mono.ipynb` ([**Colab link**](https://colab.research.google.com/github/HaotingZhang1/SynBa/blob/main/synba_mono.ipynb)) and `synba_combo.ipynb` ([**Colab link**](https://colab.research.google.com/github/HaotingZhang1/SynBa/blob/main/synba_combo.ipynb)), two interactive Colab/Jupyter notebooks that illustrate the monotherapy model (i.e. Box 1 in the paper) and the combination model (i.e. Box 2 in the paper) respectively.
@@ -20,6 +29,9 @@ Users can upload their own monotherapy/combination dose-response data, fit SynBa
 * (Monotherapy) The estimated noise level for the responses
 * (Combination) The contour plot for the joint posterior distribution of the **synergistic efficacy (ΔHSA)** and the **synergistic potency (α)**
 * (Combination) The histogram of the synergistic efficacy and the synergistic potency
+
+If you are running the notebooks on Google Colab, then it suffices to directly run the notebook.
+On the other hand, if you are running the notebooks locally on Jupyter notebook, then the two model files `synba_mono.stan` and `synba_combo.stan` need to be in the working directory so that they can be successfully loaded.
 
 ### Reproducing results
 The repository also contains the codes required to reproduce the results of our work (to be uploaded to bioRxiv). Results can be reproduced by following these steps:
@@ -49,7 +61,7 @@ To train the bayesynergy model, R and Rstan are used instead of Python and PySta
 ### To be updated
 The next updates of this repository will include the following:
 * More visualisation options in the interactive notebooks.
-* A more detailed documentation on how to fit SynBa to a dose-response dataset, as well as how to tune the priors and the other tunable settings.
+* A detailed documentation on how to fit SynBa to a dose-response dataset, as well as how to tune the priors and the other tunable settings.
 
 ### Citation
 If you find SynBa useful in your research, please cite our paper:

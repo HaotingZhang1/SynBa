@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 This repository is the official implementation of **SynBa**, a method for the estimation of drug combination synergies with uncertainty quantification.
-The [**preprint**](https://www.biorxiv.org/content/10.1101/2023.01.24.524900) that describes the method is now available on bioRxiv.
+The [**paper**](https://academic.oup.com/bioinformatics/article/39/Supplement_1/i121/7210462) that describes the method is now available on <i>Bioinformatics</i>.
 This repository is being maintained and will be continuously updated.
 
 The implementations in the interactive notebooks are built using **CmdStanPy**, a Python package which wraps **CmdStan**, the command-line interface to the probabilistic programming language **Stan**.
@@ -66,14 +66,18 @@ The next updates of this repository will include the following:
 ### Citation
 If you find SynBa useful in your research, please cite our paper:
 ```
-@article{zhang2023synba,
-	author = {Zhang, Haoting and Ek, Carl Henrik and Rattray, Magnus and Milo, Marta},
-	title = {SynBa: Improved estimation of drug combination synergies with uncertainty quantification},
-	elocation-id = {2023.01.24.524900},
-	year = {2023},
-	doi = {10.1101/2023.01.24.524900},
-	URL = {https://www.biorxiv.org/content/10.1101/2023.01.24.524900v2},
-	eprint = {https://www.biorxiv.org/content/10.1101/2023.01.24.524900v2.full.pdf},
-	journal = {bioRxiv}
+@article{10.1093/bioinformatics/btad240,
+    author = {Zhang, Haoting and Ek, Carl Henrik and Rattray, Magnus and Milo, Marta},
+    title = "{SynBa: improved estimation of drug combination synergies with uncertainty quantification}",
+    journal = {Bioinformatics},
+    volume = {39},
+    number = {Supplement_1},
+    pages = {i121-i130},
+    year = {2023},
+    month = {06},
+    issn = {1367-4811},
+    doi = {10.1093/bioinformatics/btad240},
+    url = {https://doi.org/10.1093/bioinformatics/btad240},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/39/Supplement\_1/i121/50741599/btad240.pdf},
 }
 ```
